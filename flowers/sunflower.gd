@@ -1,0 +1,26 @@
+class_name SunFlower extends Flower
+
+var growth_stage :int = 0 :set = set_growth_stage
+
+@onready var _animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
+@onready var _timer: Timer = $Timer
+
+func _ready() -> void:
+	_timer.timeout.connect(func(): 
+		growth_stage += 1
+		print("plant updated")
+	)
+
+func plant_flower(at_location: Vector2) -> void:
+	global_position = at_location
+	_timer.start()
+	return
+	
+func set_growth_stage(to_next_stage: int) -> void:
+	var max_growth_stage = _animated_sprite.sprite_frames.get_frame_count("growing_stages")
+	growth_stage = min(to_next_stage, max_growth_stage)
+	print(growth_stage)
+	_animated_sprite.frame = growth_stage
+	
+	if growth_stage == max_growth_stage:
+		_timer.stop()
