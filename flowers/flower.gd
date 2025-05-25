@@ -7,12 +7,7 @@ func can_flower_be_harvested() -> bool:
 
 @warning_ignore("unused_parameter")
 func plant_flower(at_location: Vector2) -> void:
-	# TBD SFX for planting
-	
 	return
 
 func harvest_flower() -> void:
-	if not is_flower_ready:
-		return
-	#TBD SFX for harvesting
-	queue_free()
+	return

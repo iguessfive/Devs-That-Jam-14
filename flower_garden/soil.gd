@@ -26,3 +26,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		sunflower_instance.top_level = true
 		sunflower_instance.plant_flower(map_to_local(input_tile_location))
 		seed_placement_map[input_tile_location] = sunflower_instance # map
+		
+func till_land() -> void:
+	pass
+	
+	
+	
+	
+	

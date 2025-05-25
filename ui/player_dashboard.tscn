@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3 uid="uid://hgdwvkwecses"]
+
+[ext_resource type="Script" uid="uid://dnuv5vweafhmi" path="res://ui/player_dashboard.gd" id="1_dr68q"]
+[ext_resource type="FontFile" uid="uid://dbrqks62utkvv" path="res://shared/fonts/lilita_one_reg.ttf" id="2_tyyco"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dr68q"]
+bg_color = Color(0.623529, 0.517647, 0.407843, 0.698039)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyyco"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+bg_color = Color(0.866667, 0.635294, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlpj"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+bg_color = Color(0.866667, 0.635294, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_nmlpj"]
+font = ExtResource("2_tyyco")
+font_size = 28
+
+[node name="PlayerDashboard" type="CanvasLayer"]
+script = ExtResource("1_dr68q")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = -93.0
+offset_right = 162.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dr68q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -79.0
+offset_top = -94.0
+offset_right = 79.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 4
+
+[node name="GreenhouseSceneButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tyyco")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/focus = SubResource("StyleBoxFlat_tyyco")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_tyyco")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tyyco")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tyyco")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tyyco")
+text = "Garden"
+
+[node name="StoreSceneButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tyyco")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/focus = SubResource("StyleBoxFlat_nmlpj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nmlpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nmlpj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nmlpj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nmlpj")
+text = "Store"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.5
+offset_top = 31.0
+offset_right = 60.5
+offset_bottom = 54.0
+grow_horizontal = 2
+text = "Teleporter"
+label_settings = SubResource("LabelSettings_nmlpj")
+horizontal_alignment = 1

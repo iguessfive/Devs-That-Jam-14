@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2fv7i04d0hdw"
-path="res://.godot/imported/grassland_tileset.png-775e51dc5b83dac69642f917bdc083f8.ctex"
+path="res://.godot/imported/dirt_tiles.png-07638ed0879858584ca4163d6b3dbc3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://greenhouse/grassland_tileset.png"
-dest_files=["res://.godot/imported/grassland_tileset.png-775e51dc5b83dac69642f917bdc083f8.ctex"]
+source_file="res://flower_garden/dirt_tiles.png"
+dest_files=["res://.godot/imported/dirt_tiles.png-07638ed0879858584ca4163d6b3dbc3d.ctex"]
 
 [params]
 
