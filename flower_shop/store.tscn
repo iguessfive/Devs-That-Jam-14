@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://didkj0rg238eh"]
+
+[ext_resource type="Script" uid="uid://dtcx4cc3cxq6e" path="res://flower_shop/store.gd" id="1_3aw1p"]
+[ext_resource type="PackedScene" uid="uid://db6i5qk6lvveq" path="res://npc/character.tscn" id="2_1io81"]
+[ext_resource type="Texture2D" uid="uid://bfxk44a7k8e1h" path="res://flower_shop/market_tileset.png" id="2_hh2n7"]
+[ext_resource type="Script" uid="uid://3nd8xrdnpam1" path="res://flower_shop/service_area.gd" id="2_pd46n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbr8o"]
+size = Vector2(71, 26)
+
+[node name="Store" type="Node2D"]
+script = ExtResource("1_3aw1p")
+
+[node name="ServiceArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-65, -116)
+script = ExtResource("2_pd46n")
+
+[node name="Sprite2D" type="Sprite2D" parent="ServiceArea"]
+texture_filter = 1
+texture = ExtResource("2_hh2n7")
+region_enabled = true
+region_rect = Rect2(-0.0931396, 463.143, 47.6729, 16.9349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ServiceArea"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_nbr8o")
+
+[node name="EntryPoint" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-101, -21)
+
+[node name="Character" parent="." instance=ExtResource("2_1io81")]
+
+[editable path="Character"]

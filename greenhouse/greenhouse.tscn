@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://c5vhwvoj8rdkf"]
+[gd_scene load_steps=8 format=4 uid="uid://c5vhwvoj8rdkf"]
 
+[ext_resource type="Script" uid="uid://dcql70q0qhwj8" path="res://greenhouse/greenhouse.gd" id="1_qlelk"]
 [ext_resource type="Texture2D" uid="uid://c2fv7i04d0hdw" path="res://greenhouse/grassland_tileset.png" id="1_rbdve"]
 [ext_resource type="Script" uid="uid://c06mfs20khpl5" path="res://greenhouse/soil.gd" id="2_7uhdk"]
 
@@ -1656,8 +1657,10 @@ texture = ExtResource("1_rbdve")
 sources/0 = SubResource("TileSetAtlasSource_32w5t")
 
 [node name="Greenhouse" type="Node2D"]
+script = ExtResource("1_qlelk")
 
 [node name="Soil" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
 z_index = -10
 tile_map_data = PackedByteArray("AAACAAUAAAACAAsAAAAAAAUAAAACAAsAAAACAAMAAAACAAsAAAAAAAMAAAACAAsAAAACAAEAAAACAAsAAAAAAAEAAAACAAsAAAACAP//AAACAAsAAAAAAP//AAACAAsAAAACAP3/AAACAAsAAAAAAP3/AAACAAsAAAD+//3/AAACAAsAAAD+////AAACAAsAAAD8////AAACAAsAAAD8/wEAAAACAAsAAAD+/wEAAAACAAsAAAD+/wMAAAACAAsAAAD8/wMAAAACAAsAAAD8/wUAAAACAAsAAAD+/wUAAAACAAsAAAD8//3/AAACAAsAAAD6//3/AAACAAsAAAD6////AAACAAsAAAD6/wEAAAACAAsAAAD6/wMAAAACAAsAAAD6/wUAAAACAAsAAAA=")
 tile_set = SubResource("TileSet_qlelk")

@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://db6i5qk6lvveq"]
+[gd_scene load_steps=4 format=3 uid="uid://db6i5qk6lvveq"]
 
-[ext_resource type="Script" uid="uid://fssne3chg1ux" path="res://npc/npc.gd" id="1_1l1n4"]
+[ext_resource type="Script" uid="uid://fssne3chg1ux" path="res://npc/character.gd" id="1_1l1n4"]
 [ext_resource type="SpriteFrames" uid="uid://bep3w6bentpmt" path="res://npc/animations/male_034.tres" id="2_ugqs2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p423g"]
+radius = 11.0
 
 [node name="Character" type="CharacterBody2D"]
 script = ExtResource("1_1l1n4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = ExtResource("2_ugqs2")
-animation = &"idle"
+animation = &"move_down"
+frame_progress = 0.136752
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p423g")

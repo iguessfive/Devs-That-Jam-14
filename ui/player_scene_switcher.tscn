@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://hgdwvkwecses"]
+
+[ext_resource type="Script" uid="uid://dnuv5vweafhmi" path="res://ui/player_scene_switcher.gd" id="1_822iq"]
+
+[node name="PlayerSceneSwitcher" type="CanvasLayer"]
+script = ExtResource("1_822iq")
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+offset_right = 158.0
+offset_bottom = 66.0
+
+[node name="GreenhouseSceneButton" type="Button" parent="CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "GreenHouse"
+
+[node name="StoreSceneButton" type="Button" parent="CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Store"
